@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306212016734",
+    "project_id": "funtastic4-e5530",
+    "storage_bucket": "funtastic4-e5530.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306212016734:android:d4470f19c256cfd62e1acf",
+        "android_client_info": {
+          "package_name": "com.example.funtastic_4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfKrt_n6BD_Rp77iK6y7OglbJ8aUVgzFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
