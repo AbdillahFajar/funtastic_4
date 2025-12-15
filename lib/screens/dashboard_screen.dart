@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:funtastic_4/screens/login_screen.dart';
 import 'package:funtastic_4/screens/notifications_screen.dart';
 import '../models/menu.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class MyDashboard extends StatefulWidget {
   const MyDashboard({super.key});
@@ -11,12 +12,13 @@ class MyDashboard extends StatefulWidget {
 }
 
 class _MyDashboardState extends State<MyDashboard> {
+  final user = FirebaseAuth.instance.currentUser;
   List<Menu> menus = [];
 
   void _getMenus() {
     menus = Menu.getMenus();
   }
-  
+
   @override
   void initState() {
     super.initState();
@@ -44,59 +46,29 @@ class _MyDashboardState extends State<MyDashboard> {
               //Bikin navigasi ke file notifications_screen.dart
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MyNotifications())
+                MaterialPageRoute(builder: (context) => MyNotifications()),
               );
-            }, 
-            icon: Icon (
-              Icons.notifications,
-              color: Color(0xFFE69500),
-            )
-          )
+            },
+            icon: Icon(Icons.notifications, color: Color(0xFFE69500)),
+          ),
         ],
       ),
       drawer: Drawer(
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-              accountName: const Text("Andrew Garfield"),
-              accountEmail: const Text("capek@ngoding.com"),
+              accountName: Text(""),
+              accountEmail: Text(user?.email ?? '-'),
               currentAccountPicture: const CircleAvatar(
-                backgroundImage: NetworkImage(
-                  "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                backgroundImage: AssetImage(
+                  "assets/images/steptodown.com668615.jpg",
                 ),
               ),
-              decoration: BoxDecoration(color: Colors.blueGrey[900]),
-              otherAccountsPictures: const [
-                // CircleAvatar(
-                //   backgroundColor: Colors.white,
-                //   backgroundImage: NetworkImage(
-                //       "https://randomuser.me/api/portraits/women/74.jpg"),
-                // ),
-                // CircleAvatar(
-                //   backgroundColor: Colors.white,
-                //   backgroundImage: NetworkImage(
-                //       "https://randomuser.me/api/portraits/men/47.jpg"),
-                // ),
-              ],
+              decoration: BoxDecoration(color: Color(0xFF253858)),
             ),
             // ListTile(
             //   leading: const Icon(Icons.home),
-            //   title: const Text("Home"),
-            //   onTap: () {},
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.code),
-            //   title: const Text("About"),
-            //   onTap: () {},
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.rule),
-            //   title: const Text("TOS"),
-            //   onTap: () {},
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.privacy_tip),
-            //   title: const Text("Privacy Policy"),
+            //   title: const Text("Simple Notes"),
             //   onTap: () {},
             // ),
             ListTile(
@@ -105,35 +77,34 @@ class _MyDashboardState extends State<MyDashboard> {
               onTap: () {
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginScreen()),
-                    (Route<dynamic> route) => false,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  (Route<dynamic> route) => false,
                 );
               },
             ),
           ],
         ),
       ),
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 20),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Fitur',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF1D1617),
-                    ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 20),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Fitur',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF1D1617),
                   ),
                 ),
-                SizedBox(height: 15),
-                SizedBox(
+              ),
+              SizedBox(height: 15),
+              SizedBox(
                 height: 200,
                 child: ListView.separated(
                   itemCount: menus.length,
@@ -151,11 +122,8 @@ class _MyDashboardState extends State<MyDashboard> {
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children:[
-                          Icon(
-                            menus[index].icon,
-                            size: 50
-                          ),
+                        children: [
+                          Icon(menus[index].icon, size: 50),
                           Text(
                             menus[index].name,
                             style: const TextStyle(
@@ -171,59 +139,72 @@ class _MyDashboardState extends State<MyDashboard> {
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
-                                  menus[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent,
-                                  menus[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent,
-                                  menus[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent,
+                                  menus[index].viewIsSelected
+                                      ? const Color(0xff92A3FD)
+                                      : Colors.transparent,
+                                  menus[index].viewIsSelected
+                                      ? const Color(0xff92A3FD)
+                                      : Colors.transparent,
+                                  menus[index].viewIsSelected
+                                      ? const Color(0xff92A3FD)
+                                      : Colors.transparent,
                                 ],
                               ),
                               borderRadius: BorderRadius.circular(50),
                             ),
                             child: ElevatedButton(
                               onPressed: () {
-                                if(menus[index].page == null)
-                                {
+                                if (menus[index].page == null) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text('Fitur ini akan segera hadir'))
+                                    SnackBar(
+                                      content: Text(
+                                        'Fitur ini akan segera hadir',
+                                      ),
+                                    ),
                                   );
 
                                   return;
                                 }
-                                
+
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => menus[index].page!
-                                  )
+                                    builder: (context) => menus[index].page!,
+                                  ),
                                 );
-                              }, 
+                              },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: menus[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent,
+                                backgroundColor: menus[index].viewIsSelected
+                                    ? const Color(0xff92A3FD)
+                                    : Colors.transparent,
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50)
+                                  borderRadius: BorderRadius.circular(50),
                                 ),
                               ),
                               child: Text(
-                              'Lihat',
-                              style: TextStyle(
-                                color: menus[index].viewIsSelected ? Colors.white : const Color(0xffC58BF2),
-                                fontSize: 14,
+                                'Lihat',
+                                style: TextStyle(
+                                  color: menus[index].viewIsSelected
+                                      ? Colors.white
+                                      : const Color(0xffC58BF2),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
-                            
-                            )
                           ),
                         ],
                       ),
                     );
-                  }
-                  )
+                  },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
 }
