@@ -23,6 +23,25 @@
           "other_platform_oauth_client": []
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306212016734:android:74ec7ea0f04cd6892e1acf",
+        "android_client_info": {
+          "package_name": "id.funtastic4.funtastic4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfKrt_n6BD_Rp77iK6y7OglbJ8aUVgzFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"
