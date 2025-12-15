@@ -106,4 +106,5 @@ flutter:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/icons/funtastic4-icon.png"
+  image_path: "assets/icons/Frame 1.png"
+  adaptive_icon_background: "#FFFFFF"
