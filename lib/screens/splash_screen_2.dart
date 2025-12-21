@@ -19,19 +19,16 @@ class SplashScreen2 extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/GI-logo.png"),
+                  image: AssetImage("assets/icons/note.png"),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
             SizedBox(height: 25),
-            // Text(
-            //   "?",
-            //   style: TextStyle(
-            //     fontSize: 25,
-            //     fontWeight: FontWeight.bold
-            //   ),
-            // ),
+            Text(
+              "Catatan kecil, manfaat besar.",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 15),
 
             //membuat bullet
@@ -44,7 +41,7 @@ class SplashScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF8B4513),
+                    color: Color(0xFF2979FF),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -54,7 +51,7 @@ class SplashScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFD2B48C),
+                    color: Color(0xFF90CAF9),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -63,7 +60,7 @@ class SplashScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFD2B48C),
+                    color: Color(0xFF90CAF9),
                   ),
                 ),
               ],
@@ -90,7 +87,7 @@ class SplashScreen2 extends StatelessWidget {
                     elevation: 5,
                   ),
                   child: Text(
-                    "assalamualaikum splash screein ini di buat sama muhamad damar bagas",
+                    "Selanjutnya",
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
