@@ -44,7 +44,7 @@ class Team {
       ),
       Team(
         nama: "Rayhandi\nTenri",
-        foto: 'assets/images/steptodown.com668615.jpg',
+        foto: 'assets/images/Rayen.jpeg',
         boxColor: Color(0xffEEA4CE),
         viewIsSelected: false,
         page: RayhandiTenri(),
