@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:funtastic_4/domain/entities/user_profile.dart';
+import 'package:funtastic_4/presentation/providers/auth_provider.dart';
 import 'package:funtastic_4/screens/login_screen.dart';
+import 'package:funtastic_4/screens/my_simple_notes.dart';
 import 'package:funtastic_4/screens/notifications_screen.dart';
 import '../models/menu.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as fb;
+import 'profile_update.dart';
+import '../data/services/user_service.dart';
+import 'package:provider/provider.dart';
 
 class MyDashboard extends StatefulWidget {
   const MyDashboard({super.key});
@@ -12,7 +18,6 @@ class MyDashboard extends StatefulWidget {
 }
 
 class _MyDashboardState extends State<MyDashboard> {
-  final user = FirebaseAuth.instance.currentUser;
   List<Menu> menus = [];
 
   void _getMenus() {
@@ -27,15 +32,17 @@ class _MyDashboardState extends State<MyDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final auth = context.read<AuthProvider>();
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Menu Utama',
+          'Informasi\nPengembang',
           style: TextStyle(
             fontSize: 20,
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
+          textAlign: TextAlign.center,
         ),
         centerTitle: true,
 
@@ -51,40 +58,100 @@ class _MyDashboardState extends State<MyDashboard> {
             },
             icon: Icon(Icons.notifications, color: Color(0xFFE69500)),
           ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileUpdate()),
+              );
+            },
+            icon: Icon(Icons.person),
+          ),
         ],
       ),
       drawer: Drawer(
-        child: ListView(
-          children: [
-            UserAccountsDrawerHeader(
-              accountName: Text(""),
-              accountEmail: Text(user?.email ?? '-'),
-              currentAccountPicture: const CircleAvatar(
-                backgroundImage: AssetImage(
-                  "assets/images/steptodown.com668615.jpg",
+        child: StreamBuilder<UserProfile>(
+          stream: context.read<UserService>().userStream(
+            fb.FirebaseAuth.instance.currentUser!.uid,
+          ),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return const Center(child: CircularProgressIndicator());
+            }
+
+            final user = snapshot.data!;
+
+            return ListView(
+              children: [
+                UserAccountsDrawerHeader(
+                  accountName: Text(user.displayName),
+                  accountEmail: Text(user.email),
+                  currentAccountPicture: Container(
+                    height: 250,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image:
+                            user.photoUrl != null && user.photoUrl!.isNotEmpty
+                            ? NetworkImage(user.photoUrl!)
+                            : const AssetImage('assets/images/user-icon.png')
+                                  as ImageProvider,
+                        fit: BoxFit.fill,
+                      ),
+                      border: Border.all(color: Colors.white, width: 3),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.2),
+                          blurRadius: 10,
+                          offset: Offset(0, 5),
+                        ),
+                      ],
+                    ),
+                  ),
+                  decoration: const BoxDecoration(color: Color(0xFF253858)),
                 ),
-              ),
-              decoration: BoxDecoration(color: Color(0xFF253858)),
-            ),
-            // ListTile(
-            //   leading: const Icon(Icons.home),
-            //   title: const Text("Simple Notes"),
-            //   onTap: () {},
-            // ),
-            ListTile(
-              leading: const Icon(Icons.logout),
-              title: const Text("Logout"),
-              onTap: () {
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                  (Route<dynamic> route) => false,
-                );
-              },
-            ),
-          ],
+                ListTile(
+                  leading: Container(
+                    height: 25,
+                    width: 25,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                        image: AssetImage("assets/icons/note.png"),
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                  title: const Text("Simple Notes"),
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MySimpleNotes(),
+                      ),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.logout),
+                  title: const Text("Logout"),
+                  onTap: () async {
+                    final nav = Navigator.of(context);
+                    await auth.signOut();
+                    nav.pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      (route) => false,
+                    );
+                  },
+                ),
+              ],
+            );
+          },
         ),
       ),
+
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20),
@@ -94,7 +161,7 @@ class _MyDashboardState extends State<MyDashboard> {
                 margin: EdgeInsets.only(left: 20),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Fitur',
+                  'Menu',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 20,
@@ -158,7 +225,7 @@ class _MyDashboardState extends State<MyDashboard> {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Fitur ini akan segera hadir',
+                                        'Menu ini akan segera hadir',
                                       ),
                                     ),
                                   );
@@ -189,7 +256,7 @@ class _MyDashboardState extends State<MyDashboard> {
                                       ? Colors.white
                                       : const Color(0xffC58BF2),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.bold
+                                  fontWeight: FontWeight.bold,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
