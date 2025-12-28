@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'splash_screen_3.dart';
+import 'package:funtastic_4/screens/splash_screen.dart';
+// import 'splash_screen_3.dart';
 
 class SplashScreen2 extends StatelessWidget {
   const SplashScreen2({super.key});
@@ -14,8 +15,8 @@ class SplashScreen2 extends StatelessWidget {
             // Spacer(),
             SizedBox(height: 50),
             Container(
-              width: 250,
-              height: 250,
+              width: 200,
+              height: 200,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
@@ -26,8 +27,9 @@ class SplashScreen2 extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Text(
-              "Catatan kecil, manfaat besar.",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              "Catatan kecil, manfaat besar",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 15),
 
@@ -78,7 +80,7 @@ class SplashScreen2 extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SplashScreen3(),
+                        builder: (context) => const SplashScreen(),
                       ),
                     );
                   },
