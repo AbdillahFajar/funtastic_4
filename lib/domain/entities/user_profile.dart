@@ -1,4 +1,4 @@
-class UserProfile{
+class UserProfile {
   final String uid;
   final String email;
   final String displayName;
@@ -15,7 +15,26 @@ class UserProfile{
     this.updatedAt,
   });
 
-  factory UserProfile.fromMap(Map<String, dynamic> map) {
+  // Method copyWith dipakai untuk menerapkan pembaruan email dengan cara yang best practice
+  // UserProfile copyWith({
+  //   String? uid,
+  //   String? email,
+  //   String? displayName,
+  //   String? photoUrl,
+  //   DateTime? createdAt,
+  //   DateTime? updatedAt,
+  // }) {
+  //   return UserProfile(
+  //     uid: uid ?? this.uid,
+  //     email: email ?? this.email,
+  //     displayName: displayName ?? this.displayName,
+  //     photoUrl: photoUrl ?? this.photoUrl,
+  //     createdAt: createdAt ?? this.createdAt,
+  //     updatedAt: updatedAt ?? this.updatedAt,
+  //   );
+  // }
+
+  factory UserProfile.fromMap(String uid, Map<String, dynamic> map) {
     final created = map['createdAt'];
     final updated = map['updatedAt'];
     DateTime createdAt;
@@ -34,9 +53,8 @@ class UserProfile{
     } else {
       updatedAt = null;
     }
-
     return UserProfile(
-      uid: map['uid'] as String,
+      uid: uid, //bikin uid yang bukan lagi mapping manual, tapi diambil dari firestore database
       email: map['email'] as String? ?? '',
       displayName: map['displayName'] as String? ?? '',
       photoUrl: map['photoUrl'] as String?,

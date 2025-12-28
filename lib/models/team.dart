@@ -36,7 +36,7 @@ class Team {
         page: DamarBagas(),
       ),
       Team(
-        nama: "Moh. Frendy\nAprianto",
+        nama: "Frendy Aprianto",
         foto: 'assets/images/steptodown.com668615.jpg',
         boxColor: Color(0xff92A3FD),
         viewIsSelected: true,
