@@ -1,10 +1,12 @@
 class Note {
   final int? id;  //id boleh null
+  final String userId;
   final String title;
   final String content;
 
   Note({
     this.id,
+    required this.userId,
     required this.title,
     required this.content
   });
@@ -13,6 +15,7 @@ class Note {
   factory Note.fromMap(Map<String, dynamic>json) =>
     Note(
       id: json['id'],
+      userId: json['userId'],
       title: json['title'],
       content: json['content']
     );
@@ -21,6 +24,7 @@ class Note {
   Map<String, dynamic> toMap(){
     return{
       'id': id,
+      'userId': userId,
       'title': title,
       'content': content
     };

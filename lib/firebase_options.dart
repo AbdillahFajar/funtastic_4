@@ -61,9 +61,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBfKrt_n6BD_Rp77iK6y7OglbJ8aUVgzFg',
-    appId: '1:306212016734:android:d4470f19c256cfd62e1acf',
+    appId: '1:306212016734:android:74ec7ea0f04cd6892e1acf',
     messagingSenderId: '306212016734',
     projectId: 'funtastic4-e5530',
     storageBucket: 'funtastic4-e5530.firebasestorage.app',
   );
+
 }

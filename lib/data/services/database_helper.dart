@@ -33,6 +33,7 @@ class DatabaseHelper {
       ''' CREATE TABLE notes 
       (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        userId TEXT NOT NULL,
         title TEXT,
         content TEXT
       ) '''
@@ -42,20 +43,24 @@ class DatabaseHelper {
   //fungsi untuk masukin data ke tabel notes
   Future<int> create(Note note) async {
     final db = await instance.database;
-    return await db.insert('notes',note.toMap());
+    return await db.insert('notes', note.toMap());
   }
 
   //fungsi untuk menampilkan semua isi dari tabel notes. artinya, menampilkan semua notes yang telah dibuat
-  Future<List<Note>> readAllNotes() async {
+  Future<List<Note>> readUserNotes(String userId) async {
     final db = await instance.database;
-    final result = await db.query('notes');
+    final result = await db.query(
+      'notes',
+      where: 'userId = ?',
+      whereArgs: [userId],
+    );
     return result.map((json) => Note.fromMap(json)).toList();
   }
 
   //fungsi untuk menghapus notes tertentu berdasarkan id
-  Future<int> delete(int id) async{
+  Future<int> delete(int id, String userId) async{
     final db = await instance.database;
-    return await db.delete('notes', where:'id = ?', whereArgs:[id]);
+    return await db.delete('notes', where:'id = ? AND userId = ?', whereArgs:[id, userId]);
   }
 
   //fungsi untuk memperbarui catatan tertentu berdasarkan id
@@ -64,8 +69,8 @@ class DatabaseHelper {
     return await db.update(
       'notes',
       note.toMap(),
-      where: 'id = ?',
-      whereArgs: [note.id],
+      where: 'id = ? AND userId = ?',
+      whereArgs: [note.id, note.userId],
     );
   }
 }
