@@ -75,6 +75,18 @@ class SplashScreen2 extends StatelessWidget {
             //bikin tombol
             Container(
               margin: EdgeInsets.only(left: 40, right: 40),
+              child: SizedBox(
+                width: double.infinity,
+                height: 40,
+                child: ElevatedButton(
+                  onPressed: {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SplashScreen4()),
+                    );
+                  },
+                )
+              ),
             ),
           ]
         )
