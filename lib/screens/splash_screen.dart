@@ -1,4 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import '../presentation/providers/auth_provider.dart';
+import 'package:provider/provider.dart';
 import 'my_simple_notes.dart';
 import 'package:flutter/material.dart';
 import 'package:funtastic_4/screens/login_screen.dart';
@@ -17,16 +18,18 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 2), () {
-      final user = FirebaseAuth.instance.currentUser;
+    WidgetsBinding.instance.addPostFrameCallback((_) async { //Gunakan ini untuk mempersiapkan agar context bisa dipakai untuk navigasi dan insialisasi AuthStateChanges
+      await Future.delayed(const Duration(seconds: 2)); //Buat delay animasi selama 2 detik
 
-      if (!mounted) return;
+      if (!mounted) return; //cek apakah widget halaman ini masih ada atau enggak, kalau sudah gak ada, maka kode di bawahnya ini tidak akan dijalankan
+
+      final auth = context.read<AuthProvider>(); //pake AuthStateChanges dari Firebase Auth yang sudah sinkron dengan AuthProvider untuk menghindari akun user lain yang masih nyangkut ketika fresh install dilakukan
 
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (_) =>
-              user == null ? const LoginScreen() : const MySimpleNotes(),
+              auth.uid == null ? const LoginScreen() : const MySimpleNotes(),
         ),
       );
     });
