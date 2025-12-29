@@ -70,6 +70,12 @@ class SplashScreen2 extends StatelessWidget {
                 ),
               ]
             ),
+            SizedBox(height: 15),
+
+            //bikin tombol
+            Container(
+              margin: EdgeInsets.only(left: 40, right: 40),
+            ),
           ]
         )
         )
