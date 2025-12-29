@@ -6,6 +6,24 @@ class SplashScreen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //Spacer(),
+            SizedBox(height: 50),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+
+              )
+                
+            ),
+          ]
+        )
+        )
+    );
   }
 }
