@@ -26,7 +26,7 @@ class SplashScreen2 extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Text(
-              "Semua ide penting dalam satu tempat"
+              "Semua ide penting dalam satu tempat",
             )
           ]
         )
