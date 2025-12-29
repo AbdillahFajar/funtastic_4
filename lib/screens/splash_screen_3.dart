@@ -27,7 +27,18 @@ class SplashScreen2 extends StatelessWidget {
             SizedBox(height: 25),
             Text(
               "Semua ide penting dalam satu tempat",
-            )
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 15),
+
+            //membuat bullet
+            Row(
+              
+            ),
           ]
         )
         )
