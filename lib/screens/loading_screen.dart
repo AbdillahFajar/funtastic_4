@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/dashboard_screen.dart';
+// import 'package:funtastic_4/screens/dashboard_screen.dart';
+import 'package:funtastic_4/screens/my_simple_notes.dart';
 import 'package:lottie/lottie.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     if (mounted) {
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => const MyDashboard()),
+        MaterialPageRoute(builder: (context) => const MySimpleNotes()),
         (Route<dynamic> route) => false,
       );
     }

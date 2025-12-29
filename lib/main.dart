@@ -1,3 +1,4 @@
+import 'package:funtastic_4/data/services/user_service.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AuthProvider(authRepo)),
         ChangeNotifierProvider(create: (_) => ProfileProvider(userRepo)),
         Provider<StorageService>(create: (_) => StorageService()),
+        Provider<UserService>(create: (_) => UserService())
       ],
       child: MaterialApp(
         title: 'Simple Notes',

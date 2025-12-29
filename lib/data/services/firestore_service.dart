@@ -8,11 +8,12 @@ class FirestoreService implements UserRepository {
 
   @override
   Future<UserProfile?> getProfile(String uid) async {
-    final doc = await _db.collection(Env.usersCollection).doc(uid).get();
+    final doc = await _db.collection(Env.usersCollection).doc(uid).get(); //ambil document dari users collection di firebase berdasarkan uid-nya
     if (!doc.exists) return null;
     final data = doc.data()!;
-    return UserProfile.fromMap({
-      'uid': uid,
+    return UserProfile.fromMap(
+      doc.id, //ambil uid dari document di collection users di firestore database
+    {
       'email': data['email'],
       'displayName': data['displayName'],
       'photoUrl': data['photoUrl'],
