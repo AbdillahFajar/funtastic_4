@@ -57,7 +57,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 **Halaman Utama (Dashboard)**  
 ![Halaman Utama (Dashboard)](screenshots/dashboard.jpeg)
 
-**Notifikasi (Foreground)**
+**Notifikasi (Foreground)**  
 ![Notifikasi (Foreground)](screenshots/foreground-notif.jpeg)
 
 **Halaman Profil Fajar Abdillah**  
