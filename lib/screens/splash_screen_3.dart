@@ -37,7 +37,11 @@ class SplashScreen2 extends StatelessWidget {
 
             //membuat bullet
             Row(
-              
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Bullet 1
+              ]
+                
             ),
           ]
         )
