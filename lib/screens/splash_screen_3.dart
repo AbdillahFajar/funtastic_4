@@ -20,9 +20,14 @@ class SplashScreen2 extends StatelessWidget {
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage('assets/icons/note.png'),
-              )
-                
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
+            SizedBox(height: 25),
+            Text(
+              "Semua ide penting dalam satu tempat"
+            )
           ]
         )
         )
