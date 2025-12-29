@@ -58,7 +58,16 @@ class SplashScreen2 extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-   
+                SizedBox(width: 10),
+                // Bullet 3
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF90CAF9),
+                    shape: BoxShape.circle,
+                  ),
+                ),
               ]
             ),
           ]
