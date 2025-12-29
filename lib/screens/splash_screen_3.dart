@@ -85,7 +85,16 @@ class SplashScreen2 extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => SplashScreen4()),
                     );
                   },
-                )
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFD2B48C),
+                    elevation: 5,
+                  ),
+                  child: Text(
+                    "Selanjutnya",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                ),
               ),
             ),
           ]
