@@ -16,6 +16,7 @@ class FirestoreService implements UserRepository {
     {
       'email': data['email'],
       'displayName': data['displayName'],
+      'fcmToken': data['fcmToken'],
       'photoUrl': data['photoUrl'],
       'createdAt': (data['createdAt'] is Timestamp) ? (data['createdAt'] as Timestamp).toDate() : data['createdAt'],
       'updatedAt': (data['updatedAt'] is Timestamp) ? (data['updatedAt'] as Timestamp).toDate() : data['updatedAt'],
@@ -27,6 +28,7 @@ class FirestoreService implements UserRepository {
     return _db.collection(Env.usersCollection).doc(profile.uid).set({
       'email': profile.email,
       'displayName': profile.displayName,
+      'fcmToken': profile.fcmToken,
       'photoUrl': profile.photoUrl,
       'createdAt': Timestamp.fromDate(profile.createdAt),
       'updatedAt': profile.updatedAt != null ? Timestamp.fromDate(profile.updatedAt!) : FieldValue.delete(),

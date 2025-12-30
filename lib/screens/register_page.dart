@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:funtastic_4/screens/loading_screen.dart';
 import 'package:image_picker/image_picker.dart';
@@ -17,6 +18,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final messaging = FirebaseMessaging.instance;
   final _email = TextEditingController();
   final _password = TextEditingController();
   final _displayName = TextEditingController();
@@ -218,10 +220,12 @@ class _RegisterPageState extends State<RegisterPage> {
                                           );
                                     }
                                     final now = DateTime.now();
+                                    final token = await messaging.getToken();
                                     final profile = UserProfile(
                                       uid: auth.uid!,
                                       email: _email.text.trim(),
                                       displayName: _displayName.text.trim(),
+                                      fcmToken: token,
                                       photoUrl: photoUrl,
                                       createdAt: now,
                                       updatedAt: now,

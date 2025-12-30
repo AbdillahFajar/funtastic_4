@@ -17,7 +17,6 @@ class ProfileUpdate extends StatefulWidget {
 }
 
 class _ProfileUpdateState extends State<ProfileUpdate> {
-  final _email = TextEditingController();
   final _displayName = TextEditingController();
   Uint8List? _photoBytes;
   bool _initialized = false;
@@ -36,7 +35,6 @@ class _ProfileUpdateState extends State<ProfileUpdate> {
 
       final profile = context.read<ProfileProvider>().profile;
       if (profile != null && mounted) {
-        _email.text = profile.email;
         _displayName.text = profile.displayName;
         setState(() {
           _initialized = true;
@@ -201,6 +199,7 @@ class _ProfileUpdateState extends State<ProfileUpdate> {
                                     uid: uid,
                                     email: p!.email, //Pasang email sebelumnya
                                     displayName: _displayName.text.trim(),
+                                    fcmToken: p.fcmToken, //pasang token sebelumnya yang udah didapat dari registrasi
                                     photoUrl: photoUrl,
                                     createdAt: p.createdAt,
                                     updatedAt: now,

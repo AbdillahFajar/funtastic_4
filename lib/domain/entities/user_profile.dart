@@ -2,6 +2,7 @@ class UserProfile {
   final String uid;
   final String email;
   final String displayName;
+  final String? fcmToken;
   final String? photoUrl;
   final DateTime createdAt;
   final DateTime? updatedAt;
@@ -10,6 +11,7 @@ class UserProfile {
     required this.uid,
     required this.email,
     required this.displayName,
+    this.fcmToken,
     this.photoUrl,
     required this.createdAt,
     this.updatedAt,
@@ -57,6 +59,7 @@ class UserProfile {
       uid: uid, //bikin uid yang bukan lagi mapping manual, tapi diambil dari firestore database
       email: map['email'] as String? ?? '',
       displayName: map['displayName'] as String? ?? '',
+      fcmToken: map['fcmToken'] as String?,
       photoUrl: map['photoUrl'] as String?,
       createdAt: createdAt,
       updatedAt: updatedAt,
