@@ -46,7 +46,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 ![Splash Screen 1](screenshots/ss-1.jpeg)
 
 **Splash Screen 2**  
-![Splash Screen 2](screenshots/)
+![Splash Screen 2](screenshots/ss-2.jpeg)
 
 **Splash Screen 3**  
 ![Splash Screen 3](screenshots/)
