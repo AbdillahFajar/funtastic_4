@@ -28,7 +28,7 @@ class SplashScreen3 extends StatelessWidget {
             Text(
               "Semua ide penting dalam satu tempat",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
@@ -80,7 +80,7 @@ class SplashScreen3 extends StatelessWidget {
                 height: 40,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => SplashScreen()),
                     );
