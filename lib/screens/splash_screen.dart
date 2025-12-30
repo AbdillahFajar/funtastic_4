@@ -18,13 +18,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) async { //Gunakan ini untuk mempersiapkan agar context bisa dipakai untuk navigasi dan insialisasi AuthStateChanges
-      await Future.delayed(const Duration(seconds: 2)); //Buat delay animasi selama 2 detik
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(seconds: 2));
 
-      if (!mounted) return; //cek apakah widget halaman ini masih ada atau enggak, kalau sudah gak ada, maka kode di bawahnya ini tidak akan dijalankan
-
-      final auth = context.read<AuthProvider>(); //pake AuthStateChanges dari Firebase Auth yang sudah sinkron dengan AuthProvider untuk menghindari akun user lain yang masih nyangkut ketika fresh install dilakukan
-
+      if (!mounted) return;
+      final auth = context.read<AuthProvider>();
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

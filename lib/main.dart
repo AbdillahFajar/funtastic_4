@@ -1,9 +1,9 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:funtastic_4/data/services/user_service.dart';
+import 'package:funtastic_4/screens/app_entry.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:funtastic_4/screens/splash_screen_2.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../core/env.dart';
@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF0D47A1)),
           fontFamily: "Poppins",
         ),
-        home: SplashScreen2(),
+        home: AppEntry(),
       ),
     );
   }

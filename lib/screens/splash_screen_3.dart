@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'splash_screen.dart';
 
 class SplashScreen3 extends StatelessWidget {
@@ -27,10 +28,7 @@ class SplashScreen3 extends StatelessWidget {
             SizedBox(height: 25),
             Text(
               "Semua ide penting dalam satu tempat",
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 15),
@@ -68,7 +66,7 @@ class SplashScreen3 extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-              ]
+              ],
             ),
             SizedBox(height: 15),
 
@@ -79,7 +77,10 @@ class SplashScreen3 extends StatelessWidget {
                 width: double.infinity,
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    await prefs.setBool('hasSeenOnboarding', true);
+
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => SplashScreen()),
@@ -91,15 +92,14 @@ class SplashScreen3 extends StatelessWidget {
                   ),
                   child: Text(
                     "Selanjutnya",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ),
             ),
-        )]
-        )
-        )
+          ],
+        ),
+      ),
     );
   }
 }
