@@ -60,7 +60,15 @@ class FrendyAprianto extends StatelessWidget {
               ),
             ),
 
-            
+            const SizedBox(height: 30),
+
+            /// CARD INFORMASI
+            Card(
+              elevation: 6,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
           ],
         ),
           
