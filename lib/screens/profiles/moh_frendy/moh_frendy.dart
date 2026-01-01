@@ -68,6 +68,11 @@ class FrendyAprianto extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    infoRow("NIM", "1123150125"),
             ),
           ],
         ),
