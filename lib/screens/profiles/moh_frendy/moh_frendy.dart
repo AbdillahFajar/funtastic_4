@@ -20,7 +20,21 @@ class FrendyAprianto extends StatelessWidget {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 65,
+              backgroundColor: Colors.blueGrey,
+              child: CircleAvatar(
+                radius: 60,
+                backgroundImage:
+                    const AssetImage('assets/images/Frendy.jpeg'),
+              ),
+            ),
+          ],
+        ),
+          
       ),
     );
   }
