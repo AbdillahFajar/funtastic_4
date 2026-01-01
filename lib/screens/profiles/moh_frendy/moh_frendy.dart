@@ -19,11 +19,9 @@ class FrendyAprianto extends StatelessWidget {
         backgroundColor: Colors.grey.shade200,
         elevation: 0,
       ),
-      body: Center(
-        child: Text(
-          'Profil Frendy Aprianto'
-        ),
-      )
+      body: SingleChildScrollView(
+        
+      ),
     );
   }
 }
