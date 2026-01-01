@@ -73,6 +73,18 @@ class FrendyAprianto extends StatelessWidget {
                 child: Column(
                   children: [
                     infoRow("NIM", "1123150125"),
+                    infoRow("Kelas", "TI 23 SE 2"),
+                    infoRow(
+                      "Minat",
+                      "Flutter, PHP, UX Design, Git, C++",
+                    ),
+                    infoRow(
+                      "Deskripsi",
+                      "Fokus pada pengembangan aplikasi splash screen dan tampilan profile.",
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
