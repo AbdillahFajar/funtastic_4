@@ -32,6 +32,35 @@ class FrendyAprianto extends StatelessWidget {
                     const AssetImage('assets/images/Frendy.jpeg'),
               ),
             ),
+
+            const SizedBox(height: 16),
+
+            //name
+            const Text(
+              "Moh Frendy Aprianto",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 8),
+
+            //subtitle
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: const Text(
+                "Mahasiswa Informatika",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+
+            
           ],
         ),
           
