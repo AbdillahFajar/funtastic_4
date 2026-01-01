@@ -16,6 +16,8 @@ class FrendyAprianto extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        backgroundColor: Colors.grey.shade200,
+        elevation: 0,
       ),
       body: Center(
         child: Text(
