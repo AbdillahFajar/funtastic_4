@@ -92,4 +92,23 @@ class FrendyAprianto extends StatelessWidget {
       ),
     );
   }
+  Widget infoRow(String title, String value) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 90,
+            child: Text(
+              title,
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ),
+          const Text(": "),
+          Expanded(child: Text(value)),
+           ],
+      ),
+    );
+  }
 }
