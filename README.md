@@ -31,7 +31,7 @@ Aplikasi sederhana ini dikembangkan oleh kelompok Funtastic 4, yang terdiri dari
   - Daftar Pekerjaan: 
     - Membuat splash screen, 
     - Membuat halaman profil Frendy Aprianto.
-  - LinkedIn: [linkedin.com/in/frendy-apr] (https://www.linkedin.com/in/frendy-apr-145982102?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+  - LinkedIn: https://www.linkedin.com/in/frendy-apr-145982102?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
   - Skills: Flutter, PHP, UI/UX Design, C++, Git
 - Rayhandi Tenri sebagai Developer 4
   - Daftar Pekerjaan: 
