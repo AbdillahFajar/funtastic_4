@@ -37,7 +37,7 @@ class Team {
       ),
       Team(
         nama: "Frendy Aprianto",
-        foto: 'assets/images/steptodown.com668615.jpg',
+        foto: 'assets/images/Frendy.jpeg',
         boxColor: Color(0xff92A3FD),
         viewIsSelected: true,
         page: FrendyAprianto(),

@@ -67,7 +67,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 ![Halaman Profil Damar Bagas](screenshots/damar.jpeg)
 
 **Halaman Profil Frendy Aprianto**  
-![Halaman Profil Frendy Aprianto](screenshots/)
+![Halaman Profil Frendy Aprianto](screenshots/frendy.jpeg)
 
 **Halaman Profil Rayhandi Tenri**  
 ![Halaman Profil Rayhandi Tenri](screenshots/)
