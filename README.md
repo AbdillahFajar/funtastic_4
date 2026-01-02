@@ -26,13 +26,13 @@ Aplikasi sederhana ini dikembangkan oleh kelompok Funtastic 4, yang terdiri dari
     - Membuat halaman tim pengembang 
     - Membuat halaman profil Damar Bagas.
   - LinkedIn: 
-  - Skills: 
+  - Skills: Java, Git, Flutter, MySQL
 - Moh. Frendy Aprianto sebagai Developer 3
   - Daftar Pekerjaan: 
     - Membuat splash screen, 
     - Membuat halaman profil Frendy Aprianto.
   - LinkedIn: 
-  - Skills: 
+  - Skills: Flutter, PHP, UI/UX Design, C++, Git
 - Rayhandi Tenri sebagai Developer 4
   - Daftar Pekerjaan: 
     - ?
