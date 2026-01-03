@@ -28,7 +28,7 @@ class SplashScreen4 extends StatelessWidget {
             SizedBox(height: 25),
             Text(
               "Catatan pribadi kapan pun kamu butuh.",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 15),
