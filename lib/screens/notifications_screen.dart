@@ -57,6 +57,28 @@ class _MyNotificationsState extends State<MyNotifications> {
       "TOKEN SAYA:$token",
     ); //Jangan lupa untuk copy token ini agar bisa melakukan tes notifikasi di firebase messaging atau dari postman
 
+    //Tampilkan pesan notifikasi ketika aplikasi dalam keadaan terminated (lagi gak dipakai)
+    RemoteMessage? initialMessage = await FirebaseMessaging.instance
+        .getInitialMessage();
+
+    if (initialMessage != null && initialMessage.notification != null) {
+      setState(() {
+        _message =
+            "${initialMessage.notification!.title}\n${initialMessage.notification!.body}";
+      });
+    }
+
+    //Tampilkan pesan notifikasi ketika aplikasi dalam keadaan background (sedang dipakai, tapi user lagi gak ada di dalam aplikasinya)
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      print("Notif diklik dari background");
+      if (message.notification != null) {
+        setState(() {
+          _message =
+              "${message.notification!.title}\n${message.notification!.body}";
+        });
+      }
+    });
+
     //4. Menerima notifikasi saat aplikasi sedang dalam situasi foreground
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       print("Menerima pesan foreground:${message.messageId}");
@@ -113,7 +135,7 @@ class _MyNotificationsState extends State<MyNotifications> {
       ),
       body: Center(
         child: Text(
-          _message,
+          _message, //tampilkan pesan notifikasinya di sini
           style: TextStyle(fontSize: 15),
           textAlign: TextAlign.center,
         ),
