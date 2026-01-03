@@ -42,7 +42,7 @@ class RayhandiTenri extends StatelessWidget {
                 child: const CircleAvatar(
                   radius: 70,
                   backgroundColor: Colors.white10,
-                  backgroundImage: NetworkImage('assets/images/Rayen.jpeg'),
+                  backgroundImage: AssetImage('assets/images/Rayen.jpeg'),
                   // Ganti NetworkImage dengan AssetImage('assets/foto_anda.jpg') jika ada file lokal
                 ),
               ),
