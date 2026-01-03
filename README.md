@@ -18,14 +18,14 @@ Aplikasi sederhana ini dikembangkan oleh kelompok Funtastic 4, yang terdiri dari
     - Membuat fitur terima notifikasi dari Firebase Cloud Message
     - Membuat halaman Informasi Pengembang
     - Membuat halaman profil Fajar Abdillah.
-  - Link LinkedIn: 
+  - LinkedIn: - 
   - Skills: Flutter, Laravel, MySQL, Git, Github
 - Muhammad Damar Bagas sebagai Developer 2
   - Daftar Pekerjaan: 
     - Membuat splash screen, 
     - Membuat halaman tim pengembang 
     - Membuat halaman profil Damar Bagas.
-  - LinkedIn: 
+  - LinkedIn: -
   - Skills: Java, Git, Flutter, MySQL
 - Moh. Frendy Aprianto sebagai Developer 3
   - Daftar Pekerjaan: 
@@ -35,9 +35,10 @@ Aplikasi sederhana ini dikembangkan oleh kelompok Funtastic 4, yang terdiri dari
   - Skills: Flutter, PHP, UI/UX Design, C++, Git
 - Rayhandi Tenri sebagai Developer 4
   - Daftar Pekerjaan: 
-    - ?
-  - LinkedIn: 
-  - Skills: 
+    - Membuat splash screen, 
+    - Membuat halaman profil Rayhandi Tenri
+  - LinkedIn: -
+  - Skills: Flutter
 
 ## Screenshots Aplikasi
 Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screenshots`):
