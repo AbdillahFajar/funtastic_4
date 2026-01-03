@@ -1,6 +1,10 @@
+import '../presentation/providers/auth_provider.dart';
+import 'package:provider/provider.dart';
+import 'my_simple_notes.dart';
 import 'package:flutter/material.dart';
 import 'package:funtastic_4/screens/login_screen.dart';
 import 'package:lottie/lottie.dart';
+import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,18 +17,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _navigateToDashboard();
-  }
 
-  _navigateToDashboard() async {
-    await Future.delayed(const Duration(seconds: 3));
-    if (mounted) {
-      Navigator.pushAndRemoveUntil(
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(seconds: 2));
+
+      if (!mounted) return;
+      final auth = context.read<AuthProvider>();
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
-        (Route<dynamic> route) => false,
+        MaterialPageRoute(
+          builder: (_) =>
+              auth.uid == null ? const LoginScreen() : const MySimpleNotes(),
+        ),
       );
-    }
+    });
   }
 
   @override

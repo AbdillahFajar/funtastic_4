@@ -36,15 +36,15 @@ class Team {
         page: DamarBagas(),
       ),
       Team(
-        nama: "Moh. Frendy\nAprianto",
-        foto: 'assets/images/steptodown.com668615.jpg',
+        nama: "Frendy Aprianto",
+        foto: 'assets/images/Frendy.jpeg',
         boxColor: Color(0xff92A3FD),
         viewIsSelected: true,
         page: FrendyAprianto(),
       ),
       Team(
         nama: "Rayhandi\nTenri",
-        foto: 'assets/images/steptodown.com668615.jpg',
+        foto: 'assets/images/Rayen.jpeg',
         boxColor: Color(0xffEEA4CE),
         viewIsSelected: false,
         page: RayhandiTenri(),
