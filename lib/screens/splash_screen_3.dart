@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'splash_screen.dart';
+import 'splash_screen_4.dart';
 
 class SplashScreen3 extends StatelessWidget {
   const SplashScreen3({super.key});
@@ -77,13 +76,11 @@ class SplashScreen3 extends StatelessWidget {
                 width: double.infinity,
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () async {
-                    final prefs = await SharedPreferences.getInstance();
-                    await prefs.setBool('hasSeenOnboarding', true);
-
+                  onPressed: () {
+                    
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => SplashScreen()),
+                      MaterialPageRoute(builder: (context) => SplashScreen4()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
