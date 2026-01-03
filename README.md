@@ -49,7 +49,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 ![Splash Screen 2](screenshots/ss-2.jpeg)
 
 **Splash Screen 3**  
-![Splash Screen 3](screenshots/)
+![Splash Screen 3](screenshots/ss-3.jpeg)
 
 **Splash Screen 4**  
 ![Splash Screen 4](screenshots/ss-4.jpeg)
@@ -70,7 +70,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 ![Halaman Profil Frendy Aprianto](screenshots/frendy.jpeg)
 
 **Halaman Profil Rayhandi Tenri**  
-![Halaman Profil Rayhandi Tenri](screenshots/)
+![Halaman Profil Rayhandi Tenri](screenshots/rayen.jpeg)
 
 ## Link Youtube Presentasi
 
