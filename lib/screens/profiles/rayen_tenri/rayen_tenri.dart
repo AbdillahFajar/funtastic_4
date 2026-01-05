@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class RayhandiTenri extends StatelessWidget {
   const RayhandiTenri({super.key});
 
@@ -18,6 +19,17 @@ class RayhandiTenri extends StatelessWidget {
     );
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Rayhandi Tenri",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Container(
         decoration: gradientBackground,
         height: double.infinity,
@@ -52,14 +64,17 @@ class RayhandiTenri extends StatelessWidget {
               Text(
                 "Rayhandi Tenri",
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      letterSpacing: 1.2,
-                    ),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 1.2,
+                ),
               ),
               const SizedBox(height: 8),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
@@ -67,7 +82,10 @@ class RayhandiTenri extends StatelessWidget {
                 ),
                 child: const Text(
                   "NIM: 1123150121 | Kelas: TISE23P2",
-                  style: TextStyle(color: Colors.cyanAccent, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    color: Colors.cyanAccent,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
 
@@ -111,7 +129,12 @@ class RayhandiTenri extends StatelessWidget {
     );
   }
 
-  Widget _buildGlassCard(BuildContext context, {required String title, required IconData icon, required Widget content}) {
+  Widget _buildGlassCard(
+    BuildContext context, {
+    required String title,
+    required IconData icon,
+    required Widget content,
+  }) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(20),
