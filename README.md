@@ -1,5 +1,5 @@
 # Aplikasi Catatan Sederhana (Funtastic Notes)
-Funtastic Note adalah aplikasi pencatatan sederhana yang dibuat khusus untuk mencatat dengan cara kerja yang mudah, ringan dan bermanfaat. Aplikasi ini menggunakan firebase untuk menangani proses login dan registrasi, memperbarui profile user, menerima notifikasi dan menggunakan supabase untuk menyimpan foto yang diupload oleh user. Sedangkan untuk setiap catatan yang dibuat oleh user, akan disimpan menggunakan database lokal yaitu SQLite.
+Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencatat dengan cara kerja yang mudah, ringan dan bermanfaat. Aplikasi ini menggunakan firebase untuk menangani proses login dan registrasi, memperbarui profile user, menerima notifikasi dan menggunakan supabase untuk menyimpan foto yang diupload oleh user. Sedangkan untuk setiap catatan yang dibuat oleh user, disimpan menggunakan database lokal yaitu SQLite.
 
 ## Informasi Kampus dan Mata Kuliah
 Institut Teknologi dan Bisnis Bina Sarana Global atau Global Institute, adalah sebuah lembaga pendidikan yang berfokus untuk mengembangkan potensi mahasiswa atau mahasiswi yang sesuai dengan kebutuhan industri digital saat ini, salah satunya adalah potensi membangun dan mengembangkan perangkat lunak berbasis mobile melalui mata kuliah Pemrograman Aplikasi Mobile. Mata kuliah ini terdiri dari 3 SKS dan dibagi menjadi 2 tahap. Tahap pertama yaitu Pemrograman Aplikasi Mobile I, yang berfokus pada pembelajaran dan praktek dasar membangun dan mengembangkan aplikasi mobile menggunakan bahasa dart dan framework flutter hingga diharapkan untuk para mahasiswa/i mampu membangun dan mengembangkan aplikasi mobile sederhana yang juga bisa digunakan sebagai portofolio mahasiswa sebagai persiapan untuk memasuki dunia kerja di industri digital khususnya di bidang IT Mobile Programming. Kemudian tahap kedua, yaitu Pemrograman Aplikasi Mobile II, adalah tahap lanjutan yang juga berfokus pada pembelajaran dan praktek membangun dan mengembangkan aplikasi mobile dengan pengajaran dan materi yang lebih meningkat dari tahap dasar. 
@@ -74,7 +74,7 @@ Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screensho
 ![Halaman Profil Rayhandi Tenri](screenshots/rayen.jpeg)
 
 ## Link Youtube Presentasi
-
+https://youtu.be/uT79qpT3mIE?si=zp9WuRBtSBBiaqKD
 
 ## Catatan Tambahan
 - Aplikasi ini hanya dapat dijalankan di mobile Android dengan SDK flutter versi terbaru. Jalankan perintah flutter pub get di terminal terlebih dahulu agar bisa mendapatkan semua dependencies yang dibutuhkan di proyek ini.
