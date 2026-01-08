@@ -1,6 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:funtastic_4/data/services/user_service.dart';
-import 'package:funtastic_4/screens/app_entry.dart';
+import 'package:funtastic_4/presentation/screens/app_entry.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';

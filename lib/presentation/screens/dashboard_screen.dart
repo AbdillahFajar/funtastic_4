@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:funtastic_4/domain/entities/user_profile.dart';
 import 'package:funtastic_4/presentation/providers/auth_provider.dart';
-import 'package:funtastic_4/screens/login_screen.dart';
-import 'package:funtastic_4/screens/my_simple_notes.dart';
-import 'package:funtastic_4/screens/notifications_screen.dart';
-import '../models/menu.dart';
+import 'package:funtastic_4/presentation/screens/login_screen.dart';
+import 'package:funtastic_4/presentation/screens/my_simple_notes.dart';
+import 'package:funtastic_4/presentation/screens/notifications_screen.dart';
+import '../../models/menu.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
 import 'profile_update.dart';
-import '../data/services/user_service.dart';
+import '../../data/services/user_service.dart';
 import 'package:provider/provider.dart';
 
 class MyDashboard extends StatefulWidget {

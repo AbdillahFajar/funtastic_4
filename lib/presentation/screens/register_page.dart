@@ -1,13 +1,13 @@
 import 'dart:typed_data';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/loading_screen.dart';
+import 'package:funtastic_4/presentation/screens/loading_screen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import '../../domain/entities/user_profile.dart';
-import '../../data/services/storage_service.dart';
-import '../presentation/providers/auth_provider.dart';
-import '../presentation/providers/profile_provider.dart';
+import '../../../domain/entities/user_profile.dart';
+import '../../../data/services/storage_service.dart';
+import '../providers/auth_provider.dart';
+import '../providers/profile_provider.dart';
 // import 'dashboard_screen.dart';
 
 class RegisterPage extends StatefulWidget {

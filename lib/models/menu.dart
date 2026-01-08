@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/team_screen.dart';
+import 'package:funtastic_4/presentation/screens/team_screen.dart';
 
 class Menu {
   String name;

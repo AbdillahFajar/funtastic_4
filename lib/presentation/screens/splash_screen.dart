@@ -1,8 +1,8 @@
-import '../presentation/providers/auth_provider.dart';
+import '../providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 import 'my_simple_notes.dart';
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/login_screen.dart';
+import 'package:funtastic_4/presentation/screens/login_screen.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:async';
 
