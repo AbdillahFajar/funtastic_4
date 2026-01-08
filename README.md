@@ -40,7 +40,7 @@ Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencat
   <img src="screenshots/ss-2.jpeg" alt="Splash Screen 2" width="200"/>
   <img src="screenshots/ss-3.jpeg" alt="Splash Screen 3" width="200"/>
   <img src="screenshots/ss-4.jpeg" alt="Splash Screen 4" width="200"/>
-  <img src="screenshots/dashboard.png" alt="Halaman Utama" width="200"/>
+  <img src="screenshots/dashboard.jpeg" alt="Halaman Utama" width="200"/>
   <img src="screenshots/foreground-notif.jpeg" alt="Notifikasi" width="200"/>
   <img src="screenshots/fajar.jpeg" alt="Fajar Abdillah" width="200"/>
   <img src="screenshots/damar.jpeg" alt="Damar Bagas" width="200"/>
