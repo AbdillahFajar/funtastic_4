@@ -1,80 +1,244 @@
-# Aplikasi Catatan Sederhana (Funtastic Notes)
+# Funtastic Note App - Flutter Application
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/24ff1705-2151-4efa-87b3-9ab09a40c8af" alt="Logo Global" width="200"/>
+  <br/>
+  <p>Institut Teknologi dan Bisnis Bina Sarana Global</p>
+</div>
+<div align="center">
+FAKULTAS TEKNOLOGI INFORMASI & KOMUNIKASI 
+<br>
+https://global.ac.id/
+  </div>
+
+  ##  Project UAS
+  - Mata Kuliah : Aplikasi Mobile
+  - Kelas : KS1234 
+  - Semester : GANJIL 
+  - Tahun Akademik: 2025 - 2026 
+  
+  
+
+## About The Project
+
 Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencatat dengan cara kerja yang mudah, ringan dan bermanfaat. Aplikasi ini menggunakan firebase untuk menangani proses login dan registrasi, memperbarui profile user, menerima notifikasi dan menggunakan supabase untuk menyimpan foto yang diupload oleh user. Sedangkan untuk setiap catatan yang dibuat oleh user, disimpan menggunakan database lokal yaitu SQLite.
 
-## Informasi Kampus dan Mata Kuliah
-Institut Teknologi dan Bisnis Bina Sarana Global atau Global Institute, adalah sebuah lembaga pendidikan yang berfokus untuk mengembangkan potensi mahasiswa atau mahasiswi yang sesuai dengan kebutuhan industri digital saat ini, salah satunya adalah potensi membangun dan mengembangkan perangkat lunak berbasis mobile melalui mata kuliah Pemrograman Aplikasi Mobile. Mata kuliah ini terdiri dari 3 SKS dan dibagi menjadi 2 tahap. Tahap pertama yaitu Pemrograman Aplikasi Mobile I, yang berfokus pada pembelajaran dan praktek dasar membangun dan mengembangkan aplikasi mobile menggunakan bahasa dart dan framework flutter hingga diharapkan untuk para mahasiswa/i mampu membangun dan mengembangkan aplikasi mobile sederhana yang juga bisa digunakan sebagai portofolio mahasiswa sebagai persiapan untuk memasuki dunia kerja di industri digital khususnya di bidang IT Mobile Programming. Kemudian tahap kedua, yaitu Pemrograman Aplikasi Mobile II, adalah tahap lanjutan yang juga berfokus pada pembelajaran dan praktek membangun dan mengembangkan aplikasi mobile dengan pengajaran dan materi yang lebih meningkat dari tahap dasar. 
+### Key Features
 
-## Anggota Tim Pengembang Aplikasi Funtastic Notes:
-Aplikasi sederhana ini dikembangkan oleh kelompok Funtastic 4, yang terdiri dari 4 orang mahasiswa Global Institute, yaitu:
-- Fajar Abdillah sebagai Team Leader dan Developer 1
-  - Daftar Pekerjaan: 
-    - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)   
-    - Membuat splash screen, 
-    - Membuat loading screen, 
-    - Membuat fitur login, registrasi, dan logout, 
-    - Membuat tampilan utama untuk aplikasi Funtastic Notes, 
-    - Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite,  
-    - Membuat fitur pembaruan akun user, 
-    - Membuat fitur terima notifikasi dari Firebase Cloud Message
-    - Membuat halaman Informasi Pengembang
-    - Membuat halaman profil Fajar Abdillah.
-  - LinkedIn: - 
-  - Skills: Flutter, Laravel, MySQL, Git, Github
-- Muhammad Damar Bagas sebagai Developer 2
-  - Daftar Pekerjaan: 
-    - Membuat splash screen, 
-    - Membuat halaman tim pengembang 
-    - Membuat halaman profil Damar Bagas.
-  - LinkedIn: -
-  - Skills: Java, Git, Flutter, MySQL
-- Moh. Frendy Aprianto sebagai Developer 3
-  - Daftar Pekerjaan: 
-    - Membuat splash screen, 
-    - Membuat halaman profil Frendy Aprianto.
-  - LinkedIn: https://www.linkedin.com/in/frendy-apr-145982102?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-  - Skills: Flutter, PHP, UI/UX Design, C++, Git
-- Rayhandi Tenri sebagai Developer 4
-  - Daftar Pekerjaan: 
-    - Membuat splash screen, 
-    - Membuat halaman profil Rayhandi Tenri
-  - LinkedIn: -
-  - Skills: Flutter
+- **Modern UI/UX Design** - Antarmuka yang clean, minimalis, dan user-friendly untuk pengalaman mencatat yang fokus.
+- **Media Attachment** - Dukungan upload foto ke dalam catatan yang disimpan secara aman menggunakan Supabase Storage.
+- **User Profile Management** - Fitur pengelolaan akun yang memungkinkan pengguna memperbarui foto profil dan data diri dengan mudah.
+- **Push Notifications** - Reminder untuk catatan penting
+- **Cloud Sync** - Sinkronisasi otomatis dengan Firebase
+- **Secure Authentication** - Sistem login dan registrasi yang aman, cepat, dan terpercaya menggunakan teknologi Firebase Authentication.
+- **Push Notifications** - Sistem notifikasi pintar via Firebase untuk mengingatkan pengguna akan catatan atau jadwal penting.
+- **Quick Action** - Kemudahan mengelola catatan (seperti menghapus catatan) dengan akses cepat langsung dari halaman utama.
 
-## Screenshots Aplikasi
-Berikut tampilan hasil dari menjalankan aplikasi (diambil dari folder `screenshots`):
+## Screenshots
 
-**Splash Screen 1**  
-![Splash Screen 1](screenshots/ss-1.jpeg)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/62aaa0d0-0f22-456f-a273-ba14a8de779b" alt="Splash Screen" width="200"/>
+  <img src="screenshots/login_screen.png" alt="Login" width="200"/>
+  <img src="https://github.com/user-attachments/assets/a2c08927-cb09-4ac4-a314-4cdfeab65420" alt="Home" width="200"/>
+  <img src="screenshots/profile_screen.png" alt="Profile" width="200"/>
+</div>
 
-**Splash Screen 2**  
-![Splash Screen 2](screenshots/ss-2.jpeg)
+<div align="center">
+  <img src="screenshots/note_detail.png" alt="Note Detail" width="200"/>
+  <img src="screenshots/search.png" alt="Search" width="200"/>
+  <img src="screenshots/category.png" alt="Category" width="200"/>
+  <img src="screenshots/settings.png" alt="Settings" width="200"/>
+</div>
 
-**Splash Screen 3**  
-![Splash Screen 3](screenshots/ss-3.jpeg)
+## Demo Video
 
-**Splash Screen 4**  
-![Splash Screen 4](screenshots/ss-4.jpeg)
+Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 
-**Halaman Utama (Dashboard)**  
-![Halaman Utama (Dashboard)](screenshots/dashboard.jpeg)
+**[Watch Full Demo on YouTube](https://www.youtube.com/watch?v=uT79qpT3mIE)**
 
-**Notifikasi (Foreground)**  
-![Notifikasi (Foreground)](screenshots/foreground-notif.jpeg)
+## Download APK
 
-**Halaman Profil Fajar Abdillah**  
-![Halaman Profil Fajar Abdillah](screenshots/fajar.jpeg)
+Download versi terbaru aplikasi Notes App:
 
-**Halaman Profil Damar Bagas**  
-![Halaman Profil Damar Bagas](screenshots/damar.jpeg)
+### Latest Release v1.0.0
+- [**Download APK (15.2 MB)**](https://github.com/yourusername/notes-app/releases/download/v1.0.0/notes-app-v1.0.0.apk)
 
-**Halaman Profil Frendy Aprianto**  
-![Halaman Profil Frendy Aprianto](screenshots/frendy.jpeg)
 
-**Halaman Profil Rayhandi Tenri**  
-![Halaman Profil Rayhandi Tenri](screenshots/rayen.jpeg)
+**Minimum Requirements:**
+- Android 6.0 (API level 23) or higher
+- ~20MB free storage space
 
-## Link Youtube Presentasi
-https://youtu.be/uT79qpT3mIE?si=zp9WuRBtSBBiaqKD
+## Built With
 
-## Catatan Tambahan
-- Aplikasi ini hanya dapat dijalankan di mobile Android dengan SDK flutter versi terbaru. Jalankan perintah flutter pub get di terminal terlebih dahulu agar bisa mendapatkan semua dependencies yang dibutuhkan di proyek ini.
+- **[Flutter](https://flutter.dev/)** - UI Framework
+- **[Dart](https://dart.dev/)** - Programming Language
+- **[Firebase](https://firebase.google.com/)** - Backend & Authentication
+- **[SQLite](https://www.sqlite.org/)** - Local Database
+- **[Provider](https://pub.dev/packages/provider)** - State Management
+
+
+## Getting Started
+
+### Prerequisites
+
+Pastikan Anda sudah menginstall:
+- Flutter SDK (3.16.0 or higher)
+- Dart SDK (3.2.0 or higher)
+- Android Studio / VS Code
+- Git
+
+### Installation
+
+1. Clone repository
+```bash
+git clone https://github.com/yourusername/notes-app.git
+cd notes-app
+```
+
+2. Install dependencies
+```bash
+flutter pub get
+```
+
+3. Setup Firebase
+```bash
+# Download google-services.json dari Firebase Console
+# Place in android/app/
+cp path/to/google-services.json android/app/
+```
+
+4. Run aplikasi
+```bash
+flutter run
+```
+
+### Build APK
+
+```bash
+# Debug APK
+flutter build apk --debug
+
+# Release APK
+flutter build apk --release
+
+# Split APK by ABI
+flutter build apk --split-per-abi
+```
+
+## 📁 Project Structure
+
+```
+lib/
+├── core/                       # Core utilities
+├── data/                       # Data layer
+│   └── services/               # Services & API handling
+│       ├── auth_service.dart
+│       ├── database_helper.dart
+│       ├── firestore_service.dart
+│       ├── storage_service.dart
+│       └── user_service.dart
+├── domain/                     # Domain layer
+├── models/                     # Data models
+│   ├── menu.dart
+│   ├── note.dart
+│   └── team.dart
+├── presentation/               # State Management
+│   └── providers/
+│       ├── auth_provider.dart
+│       └── profile_provider.dart
+├── screens/                    # UI Screens
+│   ├── profiles/               # Profile specific screens
+│   ├── app_entry.dart
+│   ├── dashboard_screen.dart
+│   ├── loading_screen.dart
+│   ├── login_screen.dart
+│   ├── my_simple_notes.dart
+│   ├── notifications_screen.dart
+│   ├── profile_update.dart
+│   ├── register_page.dart
+│   ├── splash_screen.dart
+│   ├── splash_screen_2.dart
+│   ├── splash_screen_3.dart
+│   └── team_screen.dart
+├── firebase_options.dart       # Firebase configuration
+└── main.dart                   # Entry point
+```
+
+## Authentication Flow
+
+```
+1. Splash Screen (Auto-login check)
+   ↓
+2. Login Screen / Register Screen
+   ↓
+3. Home Screen (Dashboard)
+   ↓
+4. Profile & Settings
+```
+
+## 🗄️ Database Schema
+
+### Notes Table
+```sql
+CREATE TABLE tableABC (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  content TEXT,
+  category_id TEXT,
+  created_at INTEGER,
+  updated_at INTEGER,
+  is_synced INTEGER DEFAULT 0
+);
+```
+
+
+## 📝 API Documentation
+
+### Authentication Endpoints
+- `POST /api/auth/register` - Register user baru
+- `POST /api/auth/login` - Login user
+- `POST /api/auth/logout` - Logout user
+- `GET /api/auth/verify` - Verify token
+
+### Development Workflow
+
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## Team Members & Contributions
+
+### Development Team
+
+| Name | Role | Contributions |
+|------|------|---------------|
+| **Fajar Abdillah** | Project Lead & Backend Developer | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
+| **Muhammad Damar Bagas** | Developer 1 | -Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
+| **Moh Frendy Aprianto** | Developer 2 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
+| **Rayhandi Tenri** | Developer 3 | - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
+## Acknowledgments
+
+- [Flutter Community](https://flutter.dev/community) - For amazing packages
+- [Firebase](https://firebase.google.com/) - For backend services
+- [Flaticon](https://www.flaticon.com/) - For app icons
+- [Unsplash](https://unsplash.com/) - For placeholder images
+
+
+
+---
+
+<div align="center">
+  <p>Made with by Funtastic Team</p>
+  <p>© 2026 Notes App. All rights reserved.</p>
+</div>
