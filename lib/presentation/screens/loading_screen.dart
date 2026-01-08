@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:funtastic_4/screens/dashboard_screen.dart';
-import 'package:funtastic_4/screens/my_simple_notes.dart';
+import 'package:funtastic_4/presentation/screens/my_simple_notes.dart';
 import 'package:lottie/lottie.dart';
 
 class LoadingScreen extends StatefulWidget {

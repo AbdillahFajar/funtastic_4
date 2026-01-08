@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/splash_screen.dart';
-import 'package:funtastic_4/screens/splash_screen_2.dart';
+import 'package:funtastic_4/presentation/screens/splash_screen.dart';
+import 'package:funtastic_4/presentation/screens/splash_screen_2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppEntry extends StatefulWidget {

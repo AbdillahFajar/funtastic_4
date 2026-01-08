@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/team.dart';
+import '../../models/team.dart';
 
 class MyTeam extends StatefulWidget {
   const MyTeam({super.key});

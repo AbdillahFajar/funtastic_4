@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/profiles/fajar_abdillah/fajar_abdillah.dart';
-import 'package:funtastic_4/screens/profiles/damar_bagas/damar_bagas.dart';
-import 'package:funtastic_4/screens/profiles/moh_frendy/moh_frendy.dart';
-import 'package:funtastic_4/screens/profiles/rayen_tenri/rayen_tenri.dart';
+import 'package:funtastic_4/presentation/screens/profiles/fajar_abdillah/fajar_abdillah.dart';
+import 'package:funtastic_4/presentation/screens/profiles/damar_bagas/damar_bagas.dart';
+import 'package:funtastic_4/presentation/screens/profiles/moh_frendy/moh_frendy.dart';
+import 'package:funtastic_4/presentation/screens/profiles/rayen_tenri/rayen_tenri.dart';
 
 class Team {
   String nama;

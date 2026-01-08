@@ -1,12 +1,12 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/my_simple_notes.dart';
+import 'package:funtastic_4/presentation/screens/my_simple_notes.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import '../../domain/entities/user_profile.dart';
-import '../../data/services/storage_service.dart';
-import '../presentation/providers/auth_provider.dart';
-import '../presentation/providers/profile_provider.dart';
+import '../../../domain/entities/user_profile.dart';
+import '../../../data/services/storage_service.dart';
+import '../providers/auth_provider.dart';
+import '../providers/profile_provider.dart';
 // import 'dashboard_screen.dart';
 
 class ProfileUpdate extends StatefulWidget {

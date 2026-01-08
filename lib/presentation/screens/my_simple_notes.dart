@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:funtastic_4/domain/entities/user_profile.dart';
 import 'package:funtastic_4/presentation/providers/auth_provider.dart';
-import 'package:funtastic_4/screens/dashboard_screen.dart';
-import 'package:funtastic_4/screens/login_screen.dart';
-import '../data/services/database_helper.dart';
-import '../models/note.dart';
+import 'package:funtastic_4/presentation/screens/dashboard_screen.dart';
+import 'package:funtastic_4/presentation/screens/login_screen.dart';
+import '../../data/services/database_helper.dart';
+import '../../models/note.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
 import 'notifications_screen.dart';
 import 'profile_update.dart';
 import 'package:provider/provider.dart';
-import '../data/services/user_service.dart';
+import '../../data/services/user_service.dart';
 
 class MySimpleNotes extends StatefulWidget {
   const MySimpleNotes({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:funtastic_4/screens/splash_screen_3.dart';
-// import 'splash_screen_3.dart';
+import 'package:funtastic_4/presentation/screens/splash_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class SplashScreen2 extends StatelessWidget {
-  const SplashScreen2({super.key});
+class SplashScreen4 extends StatelessWidget {
+  const SplashScreen4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SplashScreen2 extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Text(
-              "Catatan kecil, manfaat besar",
+              "Catatan pribadi kapan pun kamu butuh.",
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -43,7 +43,7 @@ class SplashScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF2979FF),
+                    color: Color(0xFF90CAF9),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -62,7 +62,7 @@ class SplashScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF90CAF9),
+                    color: Color(0xFF2979FF),
                   ),
                 ),
               ],
@@ -76,11 +76,14 @@ class SplashScreen2 extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    await prefs.setBool('hasSeenOnboarding', true);
+
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SplashScreen3(),
+                        builder: (context) => const SplashScreen(),
                       ),
                     );
                   },
@@ -89,7 +92,7 @@ class SplashScreen2 extends StatelessWidget {
                     elevation: 5,
                   ),
                   child: Text(
-                    "Selanjutnya",
+                    "Mulai sekarang",
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
