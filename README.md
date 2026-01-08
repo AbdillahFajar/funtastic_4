@@ -28,7 +28,6 @@ Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencat
 - **Modern UI/UX Design** - Antarmuka yang clean, minimalis, dan user-friendly untuk pengalaman mencatat yang fokus.
 - **Media Attachment** - Dukungan upload foto ke dalam catatan yang disimpan secara aman menggunakan Supabase Storage.
 - **User Profile Management** - Fitur pengelolaan akun yang memungkinkan pengguna memperbarui foto profil dan data diri dengan mudah.
-- **Push Notifications** - Reminder untuk catatan penting
 - **Cloud Sync** - Sinkronisasi otomatis dengan Firebase
 - **Secure Authentication** - Sistem login dan registrasi yang aman, cepat, dan terpercaya menggunakan teknologi Firebase Authentication.
 - **Push Notifications** - Sistem notifikasi pintar via Firebase untuk mengingatkan pengguna akan catatan atau jadwal penting.
@@ -37,17 +36,16 @@ Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencat
 ## Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/62aaa0d0-0f22-456f-a273-ba14a8de779b" alt="Splash Screen" width="200"/>
-  <img src="screenshots/login_screen.png" alt="Login" width="200"/>
-  <img src="https://github.com/user-attachments/assets/a2c08927-cb09-4ac4-a314-4cdfeab65420" alt="Home" width="200"/>
-  <img src="screenshots/profile_screen.png" alt="Profile" width="200"/>
-</div>
-
-<div align="center">
-  <img src="screenshots/note_detail.png" alt="Note Detail" width="200"/>
-  <img src="screenshots/search.png" alt="Search" width="200"/>
-  <img src="screenshots/category.png" alt="Category" width="200"/>
-  <img src="screenshots/settings.png" alt="Settings" width="200"/>
+  <img src="screenshots/ss-1.jpeg" alt="Splash Screen 1" width="200"/>
+  <img src="screenshots/ss-2.jpeg" alt="Splash Screen 2" width="200"/>
+  <img src="screenshots/ss-3.jpeg" alt="Splash Screen 3" width="200"/>
+  <img src="screenshots/ss-4.jpeg" alt="Splash Screen 4" width="200"/>
+  <img src="screenshots/dashboard.png" alt="Halaman Utama" width="200"/>
+  <img src="screenshots/foreground-notif.jpeg" alt="Notifikasi" width="200"/>
+  <img src="screenshots/fajar.jpeg" alt="Fajar Abdillah" width="200"/>
+  <img src="screenshots/damar.jpeg" alt="Damar Bagas" width="200"/>
+  <img src="screenshots/frendy.jpeg" alt="Frendy Aprianto" width="200"/>
+  <img src="screenshots/rayen.jpeg" alt="Rayhandi Tenri" width="200"/>
 </div>
 
 ## Demo Video
@@ -58,10 +56,10 @@ Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 
 ## Download APK
 
-Download versi terbaru aplikasi Notes App:
+Download versi terbaru aplikasi Funtastic Notes:
 
 ### Latest Release v1.0.0
-- [**Download APK (15.2 MB)**](https://github.com/yourusername/notes-app/releases/download/v1.0.0/notes-app-v1.0.0.apk)
+- [**Download APK (57,7 MB)**](https://drive.google.com/drive/folders/1aNF60Xc12keJs9890GgyjRRoqJuoORv3?usp=sharing)
 
 
 **Minimum Requirements:**
@@ -91,8 +89,7 @@ Pastikan Anda sudah menginstall:
 
 1. Clone repository
 ```bash
-git clone https://github.com/yourusername/notes-app.git
-cd notes-app
+git clone https://github.com/AbdillahFajar/funtastic_4
 ```
 
 2. Install dependencies
@@ -104,7 +101,7 @@ flutter pub get
 ```bash
 # Download google-services.json dari Firebase Console
 # Place in android/app/
-cp path/to/google-services.json android/app/
+cp android/app/google-services.json
 ```
 
 4. Run aplikasi
@@ -129,39 +126,46 @@ flutter build apk --split-per-abi
 
 ```
 lib/
-├── core/                       # Core utilities
-├── data/                       # Data layer
-│   └── services/               # Services & API handling
+├── core/                       # Core utilities (env, constants, helpers)
+│
+├── data/                       # Data layer (Firebase, API, local DB)
+│   └── services/
 │       ├── auth_service.dart
 │       ├── database_helper.dart
 │       ├── firestore_service.dart
 │       ├── storage_service.dart
 │       └── user_service.dart
-├── domain/                     # Domain layer
+│
+├── domain/                     # Domain layer (entities, repositories, usecases)
+│
 ├── models/                     # Data models
 │   ├── menu.dart
 │   ├── note.dart
 │   └── team.dart
-├── presentation/               # State Management
-│   └── providers/
-│       ├── auth_provider.dart
-│       └── profile_provider.dart
-├── screens/                    # UI Screens
-│   ├── profiles/               # Profile specific screens
-│   ├── app_entry.dart
-│   ├── dashboard_screen.dart
-│   ├── loading_screen.dart
-│   ├── login_screen.dart
-│   ├── my_simple_notes.dart
-│   ├── notifications_screen.dart
-│   ├── profile_update.dart
-│   ├── register_page.dart
-│   ├── splash_screen.dart
-│   ├── splash_screen_2.dart
-│   ├── splash_screen_3.dart
-│   └── team_screen.dart
-├── firebase_options.dart       # Firebase configuration
-└── main.dart                   # Entry point
+│
+├── presentation/               # UI + State Management
+│   ├── providers/
+│   │   ├── auth_provider.dart
+│   │   └── profile_provider.dart
+│   │
+│   └── screens/                
+│       ├── profiles/
+│       ├── app_entry.dart
+│       ├── dashboard_screen.dart
+│       ├── loading_screen.dart
+│       ├── login_screen.dart
+│       ├── my_simple_notes.dart
+│       ├── notifications_screen.dart
+│       ├── profile_update.dart
+│       ├── register_page.dart
+│       ├── splash_screen.dart
+│       ├── splash_screen_2.dart
+│       ├── splash_screen_3.dart
+│       ├── splash_screen_4.dart
+│       └── team_screen.dart
+│
+├── firebase_options.dart
+└── main.dart
 ```
 
 ## Authentication Flow
