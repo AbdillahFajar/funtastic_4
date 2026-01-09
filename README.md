@@ -158,24 +158,16 @@ lib/
 │   └── screens/                
 │       ├── profiles/
 │       │    ├── damar_bagas/
-│       │    │   ├── damar_bagas_profile_screen.dart
-│       │    │   ├── damar_bagas_edit_profile_screen.dart
-│       │    │   └── damar_bagas_widgets.dart
+│       │    │   └── damar_bagas.dart
 │       │    │
 │       │    ├── fajar_abdillah/
-│       │    │   ├── fajar_abdillah_profile_screen.dart
-│       │    │   ├── fajar_abdillah_edit_profile_screen.dart
-│       │    │   └── fajar_abdillah_widgets.dart
+│       │    │   └── fajar_abdillah.dart
 │       │    │
 │       │    ├── moh_frendy/
-│       │    │   ├── moh_frendy_profile_screen.dart
-│       │    │   ├── moh_frendy_edit_profile_screen.dart
-│       │    │   └── moh_frendy_widgets.dart
+│       │    │   └── moh_frendy.dart
 │       │    │
 │       │    └── rayen_tenri/
-│       │        ├── rayen_tenri_profile_screen.dart
-│       │        ├── rayen_tenri_edit_profile_screen.dart
-│       │        └── rayen_tenri_widgets.dart
+│       │        └── rayen_tenri.dart
 │       │
 │       ├── app_entry.dart
 │       ├── dashboard_screen.dart
