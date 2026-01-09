@@ -184,16 +184,13 @@ lib/
 
 ### Notes Table
 ```sql
-CREATE TABLE tableABC (
-  id TEXT PRIMARY KEY,
-  user_id TEXT NOT NULL,
-  title TEXT NOT NULL,
-  content TEXT,
-  category_id TEXT,
-  created_at INTEGER,
-  updated_at INTEGER,
-  is_synced INTEGER DEFAULT 0
-);
+CREATE TABLE notes 
+      (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        userId TEXT NOT NULL,
+        title TEXT,
+        content TEXT
+      );
 ```
 
 
@@ -219,10 +216,10 @@ CREATE TABLE tableABC (
 
 | Name | Role | Contributions |
 |------|------|---------------|
-| **Fajar Abdillah** | Project Lead & Backend Developer | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
-| **Muhammad Damar Bagas** | Developer 1 | -Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
-| **Moh Frendy Aprianto** | Developer 2 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
-| **Rayhandi Tenri** | Developer 3 | - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
+| **Fajar Abdillah** | Project Leader & Developer 1 | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
+| **Muhammad Damar Bagas** | Developer 2 | -Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
+| **Moh Frendy Aprianto** | Developer 3 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
+| **Rayhandi Tenri** | Developer 4 | - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
 
 
 ## 📄 License
@@ -243,6 +240,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <p>Made with by Funtastic Team</p>
-  <p>© 2026 Notes App. All rights reserved.</p>
+  <p>Made with by Funtastic 4</p>
+  <p>© 2026 Funtastic Notes. All rights reserved.</p>
 </div>
