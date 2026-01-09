@@ -127,9 +127,9 @@ flutter build apk --split-per-abi
 ```
 lib/
 ├── core/ 
-│   └── env.dart                      # Core utilities (env, constants, helpers)
+│   └── env.dart                     
 │
-├── data/                       # Data layer (Firebase, API, local DB)
+├── data/                      
 │   └── services/
 │       ├── auth_service.dart
 │       ├── database_helper.dart
@@ -143,14 +143,14 @@ lib/
 │   │
 │   └── repositories/                
 │       ├── auth_repository.dart
-│       └── user_repository.dart                    # Domain layer (entities, repositories, usecases)
+│       └── user_repository.dart                   
 │
-├── models/                     # Data models
+├── models/                    
 │   ├── menu.dart
 │   ├── note.dart
 │   └── team.dart
 │
-├── presentation/               # UI + State Management
+├── presentation/              
 │   ├── providers/
 │   │   ├── auth_provider.dart
 │   │   └── profile_provider.dart
