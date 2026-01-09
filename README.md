@@ -229,7 +229,7 @@ CREATE TABLE notes
 | **Fajar Abdillah** | Project Leader & Developer 1 | 1123150104 | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
 | **Muhammad Damar Bagas** | Developer 2 | 1123150107| - Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
 | **Moh Frendy Aprianto** | Developer 3 | 11231501025 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
-| **Rayhandi Tenri** | Developer 4 | 1123150121| - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
+| **Rayhandi Tenri** | Developer 4 | 1123150121 | - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
 
 
 ## 📄 License
