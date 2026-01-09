@@ -126,7 +126,8 @@ flutter build apk --split-per-abi
 
 ```
 lib/
-├── core/                       # Core utilities (env, constants, helpers)
+├── core/ 
+│   └── env.dart                      # Core utilities (env, constants, helpers)
 │
 ├── data/                       # Data layer (Firebase, API, local DB)
 │   └── services/
@@ -136,7 +137,13 @@ lib/
 │       ├── storage_service.dart
 │       └── user_service.dart
 │
-├── domain/                     # Domain layer (entities, repositories, usecases)
+├── domain/ 
+│   ├── entities/
+│   │   └── user_profile.dart
+│   │
+│   └── repositories/                
+│       ├── auth_repository.dart
+│       └── user_repository.dart                    # Domain layer (entities, repositories, usecases)
 │
 ├── models/                     # Data models
 │   ├── menu.dart
@@ -150,6 +157,26 @@ lib/
 │   │
 │   └── screens/                
 │       ├── profiles/
+│       │    ├── damar_bagas/
+│       │    │   ├── damar_bagas_profile_screen.dart
+│       │    │   ├── damar_bagas_edit_profile_screen.dart
+│       │    │   └── damar_bagas_widgets.dart
+│       │    │
+│       │    ├── fajar_abdillah/
+│       │    │   ├── fajar_abdillah_profile_screen.dart
+│       │    │   ├── fajar_abdillah_edit_profile_screen.dart
+│       │    │   └── fajar_abdillah_widgets.dart
+│       │    │
+│       │    ├── moh_frendy/
+│       │    │   ├── moh_frendy_profile_screen.dart
+│       │    │   ├── moh_frendy_edit_profile_screen.dart
+│       │    │   └── moh_frendy_widgets.dart
+│       │    │
+│       │    └── rayen_tenri/
+│       │        ├── rayen_tenri_profile_screen.dart
+│       │        ├── rayen_tenri_edit_profile_screen.dart
+│       │        └── rayen_tenri_widgets.dart
+│       │
 │       ├── app_entry.dart
 │       ├── dashboard_screen.dart
 │       ├── loading_screen.dart
