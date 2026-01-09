@@ -27,7 +27,7 @@ Funtastic Note adalah aplikasi catatan sederhana yang dibuat khusus untuk mencat
 
 - **Modern UI/UX Design** - Antarmuka yang clean, minimalis, dan user-friendly untuk pengalaman mencatat yang fokus.
 - **Media Attachment** - Dukungan upload foto ke dalam catatan yang disimpan secara aman menggunakan Supabase Storage.
-- **User Profile Management** - Fitur pengelolaan akun yang memungkinkan pengguna memperbarui foto profil dan data diri dengan mudah.
+- **User Profile Management** - Fitur pengelolaan akun yang memungkinkan pengguna memperbarui foto profil dan data diri dengan mudah. Pada fitur ini, foto profil user akan disimpan dalam Supabase
 - **Cloud Sync** - Sinkronisasi otomatis dengan Firebase
 - **Secure Authentication** - Sistem login dan registrasi yang aman, cepat, dan terpercaya menggunakan teknologi Firebase Authentication.
 - **Push Notifications** - Sistem notifikasi pintar via Firebase untuk mengingatkan pengguna akan catatan atau jadwal penting.
@@ -59,7 +59,7 @@ Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 Download versi terbaru aplikasi Funtastic Notes:
 
 ### Latest Release v1.0.0
-- [**Download APK (57,7 MB)**](https://drive.google.com/drive/folders/1aNF60Xc12keJs9890GgyjRRoqJuoORv3?usp=sharing)
+- [**Download APK (59 MB)**](https://drive.google.com/drive/folders/1aNF60Xc12keJs9890GgyjRRoqJuoORv3?usp=sharing)
 
 
 **Minimum Requirements:**
@@ -212,39 +212,29 @@ CREATE TABLE notes
       );
 ```
 
-
-## 📝 API Documentation
-
-### Authentication Endpoints
-- `POST /api/auth/register` - Register user baru
-- `POST /api/auth/login` - Login user
-- `POST /api/auth/logout` - Logout user
-- `GET /api/auth/verify` - Verify token
-
-### Development Workflow
-
+## Development Workflow
+### Example:
 1. Fork repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
+2. Create feature branch (`git checkout -b feature/splash_screen_1`)
+3. Commit changes (`git commit -m 'making the first splash screen'`)
+4. Push to branch (`git push origin feature/splash_screen_1`)
 5. Open Pull Request
 
 ## Team Members & Contributions
 
 ### Development Team
 
-| Name | Role | Contributions |
-|------|------|---------------|
-| **Fajar Abdillah** | Project Leader & Developer 1 | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
-| **Muhammad Damar Bagas** | Developer 2 | -Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
-| **Moh Frendy Aprianto** | Developer 3 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
-| **Rayhandi Tenri** | Developer 4 | - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
+| Name | Role | NIM | Contributions |
+|------|------|-----|---------------|
+| **Fajar Abdillah** | Project Leader & Developer 1 | 1123150104 | - Mengintegrasikan proyek flutter dengan Firebase dan Supabase untuk kebutuhan autentikasi (login, registrasi dan logout)<br>- Membuat splash screen<br>- Membuat loading screen<br>- Membuat fitur login, registrasi, dan logout<br>- Membuat tampilan utama untuk aplikasi Funtastic Notes<br>- Membuat proses tambah, lihat, update dan hapus catatan menggunakan sqlite<br>- Membuat fitur pembaruan akun user<br>- Membuat fitur terima notifikasi dari Firebase Cloud Message<br>- Membuat halaman Informasi Pengembang<br>- Membuat halaman profil Fajar Abdillah |
+| **Muhammad Damar Bagas** | Developer 2 | 1123150107| - Membuat splash screen<br>- Membuat halaman tim pengembang<br>- Membuat halaman profil Damar Bagas |
+| **Moh Frendy Aprianto** | Developer 3 | 11231501025 | - Membuat splash screen<br>- Membuat halaman profil Frendy Aprianto |
+| **Rayhandi Tenri** | Developer 4 | 1123150121| - Membuat splash screen<br>- Membuat halaman profil Rayhandi Tenri |
 
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 
 ## Acknowledgments
